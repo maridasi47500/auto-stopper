@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @console %>
+
+<div>
+  <%= link_to "Edit this console", edit_console_path(@console) %> |
+  <%= link_to "Back to consoles", consoles_path %>
+
+  <%= button_to "Destroy this console", @console, method: :delete %>
+</div>

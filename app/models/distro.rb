@@ -1,0 +1,2 @@
+class Distro < ApplicationRecord
+end

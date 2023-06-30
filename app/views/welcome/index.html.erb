@@ -1,0 +1,7 @@
+<h1>Welcome</h1>
+<p><%=current_user.email%></p>
+<p><%=current_user.distro.try(:name) || "pas de distro"%></p>
+<p><%=current_user.programminglanguage.try(:name) || "pas de language de programmation"%></p>
+<p><%=current_user.console.try(:name) || "pas de console"%></p>
+<p></p>
+<p></p>

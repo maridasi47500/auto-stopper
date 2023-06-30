@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Distros</h1>
+
+<div id="distros">
+  <% @distros.each do |distro| %>
+    <%= render distro %>
+    <p>
+      <%= link_to "Show this distro", distro %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New distro", new_distro_path %>

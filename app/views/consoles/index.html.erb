@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Consoles</h1>
+
+<div id="consoles">
+  <% @consoles.each do |console| %>
+    <%= render console %>
+    <p>
+      <%= link_to "Show this console", console %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New console", new_console_path %>

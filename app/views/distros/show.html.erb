@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @distro %>
+
+<div>
+  <%= link_to "Edit this distro", edit_distro_path(@distro) %> |
+  <%= link_to "Back to distros", distros_path %>
+
+  <%= button_to "Destroy this distro", @distro, method: :delete %>
+</div>
