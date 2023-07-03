@@ -21,10 +21,15 @@
     <% end %>
   </div>
 
+
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+   <div class="field">
+         <%= f.label :firstname %><br />
+             <%= f.text_field :firstname %>
+               </div>
   <div class="field">
     <%= f.label :distro_id %><br />
     <%= f.select("distro_id", Distro.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>

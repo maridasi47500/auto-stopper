@@ -16,6 +16,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.integer :console_id
       t.integer :distro_id
       t.integer :programminglanguage_id
+      t.string :firstname
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false

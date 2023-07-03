@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%=action_cable_meta_tag%>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -14,10 +15,14 @@
     <nav>
       <%=link_to "sign in", "/users/sign_in"%>
       <%=link_to "sign up", "/users/sign_up"%>
+      <%=link_to "editer mes infos", "/users/edit"%>
+      <%=link_to "bienvenue", root_path%>
+      <%=link_to "all the rooms", rooms_path%>
       <%=link_to "all the distros", distros_path%>
       <%=link_to "all the console", consoles_path%>
       <%=link_to "all the programming languages", programminglanguages_path%>
     </nav>
     <%= yield %>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
   </body>
 </html>

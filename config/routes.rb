@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  resources :games
-  resources :websites
+  resources :messages
+  resources :rooms
+  root 'welcome#index'
   devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
   resources :consoles
   resources :distros

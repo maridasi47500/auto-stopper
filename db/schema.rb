@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_30_134519) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_143158) do
   create_table "consoles", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -25,9 +25,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_30_134519) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.integer "room_id"
+    t.integer "user_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "programminglanguages", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_30_134519) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "console_id"
+    t.integer "distro_id"
+    t.integer "programminglanguage_id"
+    t.string "firstname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
