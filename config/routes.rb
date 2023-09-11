@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :ip_addresses
+  resources :pair_nodes
+  resources :macs
+  resources :traffic_infos
+  resources :switches
+  resources :myswitch_tables
   resources :messages
   resources :rooms
   root 'welcome#index'

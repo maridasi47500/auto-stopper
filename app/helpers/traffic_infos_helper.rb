@@ -1,0 +1,2 @@
+module TrafficInfosHelper
+end

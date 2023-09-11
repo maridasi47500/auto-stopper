@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Myswitch tables</h1>
+
+<div id="myswitch_tables">
+  <% @myswitch_tables.each do |myswitch_table| %>
+    <%= render myswitch_table %>
+    <p>
+      <%= link_to "Show this myswitch table", myswitch_table %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New myswitch table", new_myswitch_table_path %>

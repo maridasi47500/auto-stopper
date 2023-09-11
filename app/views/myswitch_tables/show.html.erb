@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @myswitch_table %>
+
+<div>
+  <%= link_to "Edit this myswitch table", edit_myswitch_table_path(@myswitch_table) %> |
+  <%= link_to "Back to myswitch tables", myswitch_tables_path %>
+
+  <%= button_to "Destroy this myswitch table", @myswitch_table, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ip addresses</h1>
+
+<div id="ip_addresses">
+  <% @ip_addresses.each do |ip_address| %>
+    <%= render ip_address %>
+    <p>
+      <%= link_to "Show this ip address", ip_address %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ip address", new_ip_address_path %>

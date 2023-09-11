@@ -1,0 +1,32 @@
+<%= form_with(model: traffic_info) do |form| %>
+  <% if traffic_info.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(traffic_info.errors.count, "error") %> prohibited this traffic_info from being saved:</h2>
+
+      <ul>
+        <% traffic_info.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :source_id, style: "display: block" %>
+    <%= form.text_field :mysource %>
+  </div>
+
+  <div>
+    <%= form.label :destination_id, style: "display: block" %>
+    <%= form.text_field :mydestination %>
+  </div>
+
+  <div>
+    <%= form.label :time, style: "display: block" %>
+    <%= form.datetime_field :time %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

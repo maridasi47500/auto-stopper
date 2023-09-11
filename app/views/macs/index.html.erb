@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Macs</h1>
+
+<div id="macs">
+  <% @macs.each do |mac| %>
+    <%= render mac %>
+    <p>
+      <%= link_to "Show this mac", mac %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mac", new_mac_path %>

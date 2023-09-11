@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @traffic_info %>
+
+<div>
+  <%= link_to "Edit this traffic info", edit_traffic_info_path(@traffic_info) %> |
+  <%= link_to "Back to traffic infos", traffic_infos_path %>
+
+  <%= button_to "Destroy this traffic info", @traffic_info, method: :delete %>
+</div>

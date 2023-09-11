@@ -1,0 +1,2 @@
+module MyswitchTablesHelper
+end

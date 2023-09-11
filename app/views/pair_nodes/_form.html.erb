@@ -1,0 +1,27 @@
+<%= form_with(model: pair_node) do |form| %>
+  <% if pair_node.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pair_node.errors.count, "error") %> prohibited this pair_node from being saved:</h2>
+
+      <ul>
+        <% pair_node.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :mac1_id, style: "display: block" %>
+    <%= form.text_field :mymac1 %>
+  </div>
+
+  <div>
+    <%= form.label :mac2_id, style: "display: block" %>
+    <%= form.text_field :mymac2 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

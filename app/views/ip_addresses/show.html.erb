@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ip_address %>
+
+<div>
+  <%= link_to "Edit this ip address", edit_ip_address_path(@ip_address) %> |
+  <%= link_to "Back to ip addresses", ip_addresses_path %>
+
+  <%= button_to "Destroy this ip address", @ip_address, method: :delete %>
+</div>

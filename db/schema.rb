@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_03_143158) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_11_182523) do
   create_table "consoles", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -25,10 +25,37 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_143158) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "ip_addresses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "macs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.integer "room_id"
     t.integer "user_id"
     t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "myswitch_tables", force: :cascade do |t|
+    t.integer "mac_id"
+    t.string "port"
+    t.integer "switch_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pair_nodes", force: :cascade do |t|
+    t.integer "mac1_id"
+    t.integer "mac2_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -43,6 +70,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_143158) do
   create_table "rooms", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "switches", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "traffic_infos", force: :cascade do |t|
+    t.integer "source_id"
+    t.string "destination_id"
+    t.datetime "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

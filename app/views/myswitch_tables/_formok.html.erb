@@ -1,0 +1,32 @@
+<%= form_with(model: myswitch_table) do |form| %>
+  <% if myswitch_table.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(myswitch_table.errors.count, "error") %> prohibited this myswitch_table from being saved:</h2>
+
+      <ul>
+        <% myswitch_table.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :mymac, style: "display: block" %>
+    <%= form.text_field :mymac %>
+  </div>
+
+  <div>
+    <%= form.label :port, style: "display: block" %>
+    <%= form.text_field :port %>
+  </div>
+
+  <div>
+    <%= form.label :switch_id, style: "display: block" %>
+    <%= form.select :switch_id, options_for_select(Switch.all.collect{|h|[h.name,h.id]}) %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

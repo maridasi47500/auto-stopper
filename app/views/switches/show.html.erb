@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @switch %>
+<h4>New myswitch table</h4>
+
+<%= render "myswitch_tables/formok", myswitch_table: @myswitch_table %>
+
+<br>
+
+<div>
+  <%= link_to "Edit this switch", edit_switch_path(@switch) %> |
+  <%= link_to "Back to switches", switches_path %>
+
+  <%= button_to "Destroy this switch", @switch, method: :delete %>
+</div>
