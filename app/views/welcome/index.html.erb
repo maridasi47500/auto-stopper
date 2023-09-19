@@ -1,7 +1,12 @@
 <h1>Welcome</h1>
+<p id="notice"><%=notice%></p>
+<%if user_signed_in?%>
 <p><%=current_user.email%></p>
 <p><%=current_user.distro.try(:name) || "pas de distro"%></p>
 <p><%=current_user.programminglanguage.try(:name) || "pas de language de programmation"%></p>
 <p><%=current_user.console.try(:name) || "pas de console"%></p>
+<%else%>
+  user non connecté
+<%end%>
 <p></p>
 <p></p>

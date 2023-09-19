@@ -1,0 +1,10 @@
+<%=fields_for :mac do |form|%>
+  <%=form.collection_radio_buttons(:person_id, Person.where(id: params[:id]), :id,:name, {include_hidden: false}) do |b|%>
+           <div>
+                     <%=b.label do%>
+                                 <%=b.radio_button%>
+                                           <%=b.text%>
+                                                   <%end%>
+                                                           </div>
+                                                                 <%end%>
+                                                                 <%end%>

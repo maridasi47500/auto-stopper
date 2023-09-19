@@ -1,7 +1,18 @@
 <div id="<%= dom_id mac %>">
   <p>
-    <strong>Name:</strong>
     <%= mac.name %>
+  </p>
+  <p>
+  <%if mac.device%>
+    <%=link_to mac.device.name, mac.device%>
+  <%elsif mac.person%>
+      appareil
+  <%end%>
+  <%if mac.person%>
+    de
+    <%=link_to mac.person.name, mac.person%>
+  <%end%>
+
   </p>
 
 </div>

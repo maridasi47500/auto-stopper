@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_11_182523) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_19_131141) do
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "consoles", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,6 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_11_182523) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "person_id"
+    t.integer "device_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -56,6 +71,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_11_182523) do
   create_table "pair_nodes", force: :cascade do |t|
     t.integer "mac1_id"
     t.integer "mac2_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,6 +121,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_11_182523) do
     t.string "firstname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

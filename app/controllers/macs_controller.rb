@@ -65,6 +65,6 @@ class MacsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mac_params
-      params.require(:mac).permit(:name)
+      params.require(:mac).permit(:name,:person_id, :device_id)
     end
 end

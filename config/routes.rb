@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :companies
+  resources :devices do
+    collection do
+      get "hash"
+      get "radio"
+    end
+  end
+  resources :people do
+    collection do
+      get "hash"
+      get "radio"
+    end
+  end
   resources :ip_addresses
   resources :pair_nodes
   resources :macs

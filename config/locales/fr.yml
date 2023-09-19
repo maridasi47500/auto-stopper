@@ -1,0 +1,310 @@
+fr:
+  activerecord:
+    attributes:
+      user:
+        company_id: "dans quelle entreprise tu suohaite travailler??"
+    errors:
+      messages:
+        record_invalid: 'La validation a échoué : %{errors}'
+        restrict_dependent_destroy:
+          has_one: Vous ne pouvez pas supprimer l'enregistrement car un(e) %{record}
+            dépendant(e) existe
+          has_many: Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
+            dépendants existent
+  date:
+    abbr_day_names:
+    - dim
+    - lun
+    - mar
+    - mer
+    - jeu
+    - ven
+    - sam
+    abbr_month_names:
+    - 
+    - jan.
+    - fév.
+    - mars
+    - avr.
+    - mai
+    - juin
+    - juil.
+    - août
+    - sept.
+    - oct.
+    - nov.
+    - déc.
+    day_names:
+    - dimanche
+    - lundi
+    - mardi
+    - mercredi
+    - jeudi
+    - vendredi
+    - samedi
+    formats:
+      default: "%d/%m/%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+    month_names:
+    - 
+    - janvier
+    - février
+    - mars
+    - avril
+    - mai
+    - juin
+    - juillet
+    - août
+    - septembre
+    - octobre
+    - novembre
+    - décembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: environ une heure
+        other: environ %{count} heures
+      about_x_months:
+        one: environ un mois
+        other: environ %{count} mois
+      about_x_years:
+        one: environ un an
+        other: environ %{count} ans
+      almost_x_years:
+        one: presque un an
+        other: presque %{count} ans
+      half_a_minute: une demi-minute
+      less_than_x_seconds:
+        zero: moins d'une seconde
+        one: moins d'une seconde
+        other: moins de %{count} secondes
+      less_than_x_minutes:
+        zero: moins d'une minute
+        one: moins d'une minute
+        other: moins de %{count} minutes
+      over_x_years:
+        one: plus d'un an
+        other: plus de %{count} ans
+      x_seconds:
+        one: "%{count} seconde"
+        other: "%{count} secondes"
+      x_minutes:
+        one: "%{count} minute"
+        other: "%{count} minutes"
+      x_days:
+        one: "%{count} jour"
+        other: "%{count} jours"
+      x_months:
+        one: "%{count} mois"
+        other: "%{count} mois"
+      x_years:
+        one: "%{count} an"
+        other: "%{count} ans"
+    prompts:
+      second: Seconde
+      minute: Minute
+      hour: Heure
+      day: Jour
+      month: Mois
+      year: Année
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: doit être accepté(e)
+      blank: doit être rempli(e)
+      confirmation: ne concorde pas avec %{attribute}
+      empty: doit être rempli(e)
+      equal_to: doit être égal à %{count}
+      even: doit être pair
+      exclusion: n'est pas disponible
+      greater_than: doit être supérieur à %{count}
+      greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+      in: doit être dans l'intervalle %{count}
+      inclusion: n'est pas inclus(e) dans la liste
+      invalid: n'est pas valide
+      less_than: doit être inférieur à %{count}
+      less_than_or_equal_to: doit être inférieur ou égal à %{count}
+      model_invalid: 'Validation échouée : %{errors}'
+      not_a_number: n'est pas un nombre
+      not_an_integer: doit être un nombre entier
+      odd: doit être impair
+      other_than: doit être différent de %{count}
+      present: doit être vide
+      required: doit exister
+      taken: n'est pas disponible
+      too_long:
+        one: est trop long (pas plus d'un caractère)
+        other: est trop long (pas plus de %{count} caractères)
+      too_short:
+        one: est trop court (au moins un caractère)
+        other: est trop court (au moins %{count} caractères)
+      wrong_length:
+        one: ne fait pas la bonne longueur (doit comporter un seul caractère)
+        other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+    template:
+      body: 'Veuillez vérifier les champs suivants : '
+      header:
+        one: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreur'
+        other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+  helpers:
+    select:
+      prompt: Veuillez sélectionner
+    submit:
+      create: Créer un(e) %{model}
+      submit: Enregistrer ce(tte) %{model}
+      update: Modifier ce(tte) %{model}
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: " "
+      precision: 3
+      round_mode: default
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: milliard
+          million: million
+          quadrillion: million de milliards
+          thousand: millier
+          trillion: billion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: octet
+            other: octets
+          eb: Eo
+          gb: Go
+          kb: ko
+          mb: Mo
+          pb: Po
+          tb: To
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " et "
+      two_words_connector: " et "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%d %B %Y %Hh %Mmin %Ss"
+      long: "%A %d %B %Y %Hh%M"
+      short: "%d %b %Hh%M"
+    pm: pm
+  errors:
+    messages:
+      not_found: "n'a pas été trouvé(e)"
+      already_confirmed: "a déjà été confirmé(e)"
+      not_locked: "n'était pas verrouillé(e)"
+  devise:
+    failure:
+      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
+      unconfirmed: "Vous devez confirmer votre compte pour continuer."
+      locked: "Votre compte est verrouillé."
+      invalid: "Courriel ou mot de passe incorrect."
+      invalid_token: "Jeton d'authentification incorrect."
+      timeout: "Votre session est expirée, veuillez vous reconnecter pour continuer."
+      inactive: "Votre compte n'est pas encore activé."
+    sessions:
+      user:
+        signed_in: "Réussite de la connexion."
+        signed_out: "Réussite de la deconnexion."
+    passwords:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions pour changer votre mot de passe."
+      updated: "Votre mot de passe a été changé. Vous êtes maintenant connecté."
+    confirmations:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions pour confirmer votre compte."
+      confirmed: "Votre compte a été confirmé. Vous êtes maintenant connecté."
+    registrations:
+      user:
+        signed_up: "Votre inscription est enregistrée."
+        updated: "Votre mise à jour a été prise en compte."
+      destroyed: "Bye! Votre compte est annulé. Nous souhaitons vous revoir bientôt."
+      edit:
+        edit: "Modifier"
+        # For "leave blank if you don't want to change it"
+        password_instruction: "Ne pas remplir si vous ne voulez pas le changer"
+        # For "we need your current password to confirm your changes"
+        current_password_instruction: "Vous devez remplir votre mot de passe en cours pour confirmer vos changement"                
+        update: "Mettre à jour"
+        cancel_my_account: "Annuler mon compte"
+        unhappy?: "Pas content(e)?"
+        are_you_sure?: "Êtes-vous sûr?"
+        back: "Retour"
+    unlocks:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions pour déverrouiller votre compte."
+      unlocked: "Votre compte est déverrouillé. Vous êtes maintenant connecté."
+    mailer:
+      confirmation_instructions: "Instructions de confirmation"
+      reset_password_instructions: "Instructions pour changer le mot de passe"
+      unlock_instructions: "Instructions pour déverrouiller le compte"
+    common:
+      forgot_your_password?: "Mot de passe oublié?"
+      hello: "Bonjour"
+      sign_in: "Se connecter"
+      sign_out: "Se déconnecter"       
+    shared:
+      links:    
+        didnt_receive_confirmation_instructions?: "Vous n'avez pas reçu de courriel de confirmation?"
+        didnt_receive_unlock_instructions?: "Vous n'avez pas reçu de courriel de déverrouillage de votre compte?"
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Renvoyer le courriel de confirmation"
+    mailer:
+      confirmation_instructions:
+        welcome: "Bienvenu(e)"
+        you_can_confirm_your_account_through_the_link_below: "Vous pouvez confirmer votre compte via le lien ci-dessous"
+        confirm_my_account: "Confirmer mon compte"
+      reset_password_instructions:
+        # For "Someone has requested a link to change your password, and you can do this through the link below."
+        reset_password_instruction: "Quelqu'un a demandé un lien pour changer votre mot de passe. Vous pouvez le faire via le lien ci-dessous."
+        change_my_password: "Changer mon mot de passe"
+        # For "If you didn't request this, please ignore this email."
+        wrong_request_instruction: "Si vous n'avez pas demandé ce changement, ignorez ce message."
+        # For "Your password won't change until you access the link above and create a new one."
+        unchange_password_message: "Votre mot de passe ne sera pas changé tant vous n'aurez pas accédé au lien ci-dessus pour en créer un nouveau."
+      unlock_instructions:
+        # For "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
+        locked_account_message: "Votre compte est verrouillé car vous avez échoué lors de votre identification trop de fois."
+        # For "Click the link below to unlock your account"
+        unlock_account_instruction: "Cliquez sur le lien ci-dessous pour déverrouiller votre compte"
+        unlock_my_account: "Déverrouiller mon compte"
+    passwords:
+      edit: 
+        change_your_password: "Changez votre mot de passe"
+        change_my_password: "Changer mon mot de passe"
+      new:
+        send_me_reset_password_instructions: "Envoyez-moi un courriel pour changer mon mot de passe"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Renvoyez le mail pour déverrouiller mon compte"          

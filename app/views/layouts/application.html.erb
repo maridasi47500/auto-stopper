@@ -27,8 +27,33 @@
       <%=link_to "all the switches", switches_path%>
       <%=link_to "all the trafic infos", traffic_infos_path%>
       <%=link_to "all the ip addresses", ip_addresses_path%>
+      <%=link_to "all the people", people_path%>
+      <%=link_to "all the devices", devices_path%>
+      <%if user_signed_in?%>
+        <%= button_to("Log Out", destroy_user_session_path, method: :delete) %>
+      <%end%>
     </nav>
     <%= yield %>
+    <div id="overlay">
+        <div id="text"></div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+      function on() {
+                document.getElementById("overlay").style.display = "block";
+            }
+
+      function off() {
+                document.getElementById("overlay").style.display = "none";
+            }
+        <%if user_signed_in? and current_user.company%>
+      $(function(){
+              if ($("#notice").html().includes("Votre inscription est enregistrée")){
+                      document.getElementById("text").innerHTML="<p class=\"mymsg\"><%=current_user.company.description%></p><a onclick=\"off();\">X</a>";
+                      on();
+                    }
+            });
+    <%end%>
+      </script>
   </body>
 </html>

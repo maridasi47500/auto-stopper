@@ -42,6 +42,9 @@
     <%= f.label :console_id %><br />
     <%= f.select("console_id", Console.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
   </div>
+   <div class="field">
+                                           <%= f.label :company_id %><br />
+                                                                                     <%= f.select("company_id", Company.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>  </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />

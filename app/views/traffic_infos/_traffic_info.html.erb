@@ -1,12 +1,12 @@
 <div id="<%= dom_id traffic_info %>">
   <p>
     <strong>Source:</strong>
-    <%= traffic_info.source.name %>
+    <%= link_to traffic_info.source.name, traffic_info.source %>
   </p>
 
   <p>
     <strong>Destination:</strong>
-    <%= traffic_info.destination.name %>
+    <%= link_to traffic_info.destination.name, traffic_info.destination %>
   </p>
 
   <p>

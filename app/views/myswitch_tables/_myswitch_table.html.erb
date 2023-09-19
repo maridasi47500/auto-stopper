@@ -1,17 +1,17 @@
 <div id="<%= dom_id myswitch_table %>">
   <p>
-    <strong>Mac:</strong>
-    <%= myswitch_table.mac.name %>
+    <strong>Mac :</strong>
+    <%= link_to myswitch_table.mac.name, myswitch_table.mac %>
   </p>
 
   <p>
-    <strong>Port:</strong>
+    <strong>Port :</strong>
     <%= myswitch_table.port %>
   </p>
 
   <p>
-    <strong>Switch:</strong>
-    <%= myswitch_table.switch.name %>
+    <strong>Switch :</strong>
+    <%= link_to myswitch_table.switch.name, myswitch_table.switch %>
   </p>
 
 </div>

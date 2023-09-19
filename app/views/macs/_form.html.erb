@@ -15,6 +15,36 @@
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
+    <div>personne :</div>
+    <div><input type="text" id="searchpeople" /><button id="btnsearchpeople" type="button">search people</button>
+    <select id="selectpeople"></select>
+    <div id="genstrouve">
+      <%=form.label :person_id%>
+      <%=form.collection_radio_buttons(:person_id, Person.where(id: mac.person_id),:id, :name) do |b|%>
+        <div>
+        <%=b.label do%>
+          <%=b.radio_button%>
+          <%=b.text%>
+        <%end%>
+        </div>
+      <%end%>
+    </div>
+  </div>
+    <div>chercher un appareil (ordintaue, smartphone, , etc.) :</div>
+    <div><input type="text" id="searchdevice" /><button id="btnsearchdevice" type="button">search device</button>
+    <select id="selectdevice"></select>
+    <div id="appareiltrouve">
+      <%=form.label :device_id%>
+      <%=form.collection_radio_buttons(:device_id, Device.where(id: mac.device_id), :id, :name) do |b|%>
+        <div>
+        <%=b.label do%>
+          <%=b.radio_button%>
+          <%=b.text%>
+        <%end%>
+        </div>
+      <%end%>
+    </div>
+  </div>
 
   <div>
     <%= form.submit %>
