@@ -1,0 +1,2 @@
+module MyhacksHelper
+end

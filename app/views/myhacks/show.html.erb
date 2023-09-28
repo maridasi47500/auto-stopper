@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @myhack %>
+
+<div>
+  <%= link_to "Edit this myhack", edit_myhack_path(@myhack) %> |
+  <%= link_to "Back to myhacks", myhacks_path %>
+
+  <%= button_to "Destroy this myhack", @myhack, method: :delete %>
+</div>

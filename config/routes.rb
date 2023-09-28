@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :posts
+  resources :cities
+  resources :myscripts
+  resources :mypics
+  resources :myhacks
   resources :companies
   resources :devices do
     collection do

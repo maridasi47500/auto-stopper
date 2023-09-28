@@ -1,10 +1,3 @@
 # hi
 #i18N
-
-pour chaque  user il y a :
-- une distro
-- un langage de programmation
-- une console
-- et un chat
-
-
+comment être connecté-e ? tu peux réparer le cable rj45?? c'est par ici le login

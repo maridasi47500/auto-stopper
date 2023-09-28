@@ -1,0 +1,13 @@
+  <div class="col">
+        <div class="card">
+          <img src="<%=post.image%>" class="card-img-top" style="width:220px;" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title"><%=post.title%></h5>
+                        <p class="card-text"><%=strip_tags(post.content).truncate(200)%></p>
+                                              </div>
+
+                                                   <div class="card-footer">
+                                                     <small class="text-body-secondary">il y a <%=time_ago_in_words(post.date.to_datetime)%> à <%=post.city.name%></small>
+                                                                   </div>
+                                                  </div>
+                                                    </div>

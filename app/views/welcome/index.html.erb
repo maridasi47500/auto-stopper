@@ -6,7 +6,11 @@
 <p><%=current_user.programminglanguage.try(:name) || "pas de language de programmation"%></p>
 <p><%=current_user.console.try(:name) || "pas de console"%></p>
 <%else%>
-  user non connecté
+  <p>comment être connecté-e ? tu eux réparer le cable rj45?? c'est par <%=link_to "ici", "/users/sign_in"%> le login</p>
 <%end%>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <%=render @posts%>
+</div>
+  <%=paginate @posts%>
 <p></p>
 <p></p>

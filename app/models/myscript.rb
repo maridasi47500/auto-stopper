@@ -1,0 +1,2 @@
+class Myscript < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Myhack < ApplicationRecord
+end

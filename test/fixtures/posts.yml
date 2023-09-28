@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  title: MyString
+  content: MyText
+  date: 2023-09-28
+  city_id: 1
+
+two:
+  image: MyString
+  title: MyString
+  content: MyText
+  date: 2023-09-28
+  city_id: 1
