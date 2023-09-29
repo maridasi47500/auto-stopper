@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :proms
+  resources :computerhackings
   resources :posts
   resources :cities
   resources :myscripts

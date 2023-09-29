@@ -30,6 +30,10 @@
          <%= f.label :firstname %><br />
              <%= f.text_field :firstname %>
                </div>
+                <div class="field">
+                            <%= f.label :prom_id %><br />
+                                          <%= f.select("prom_id", Prom.myprom.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+                                                          </div>
   <div class="field">
     <%= f.label :distro_id %><br />
     <%= f.select("distro_id", Distro.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>

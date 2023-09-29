@@ -3,7 +3,26 @@ fr:
     attributes:
       user:
         company_id: "dans quelle entreprise tu suohaite travailler??"
+        email: "email"
+        password: "mot de pass"
+        password_confirmation: "confirme le mot de pass"
+        firstname: "quel est ton prénom??"
+        prom_id: "tu es dans quelle promotion??"
+        distro_id: "tu as quel distribution ?? ubuntu?"
+        programminglanguage_id: "quel est ton langage de programmation préféré?"
+        console_id: "as tu console une préférée?"
     errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "remplis l'email"
+            password:
+              blank: "remplis le password"
+            company:
+              required: "remplis l'entreprise"
+            prom:
+              required: "remplis ta prom"
       messages:
         record_invalid: 'La validation a échoué : %{errors}'
         restrict_dependent_destroy:

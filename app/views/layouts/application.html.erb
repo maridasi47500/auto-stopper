@@ -20,9 +20,10 @@
       <%=link_to "editer mes infos", "/users/edit"%>
       <%=link_to "bienvenue", root_path%>
       <%=link_to "all the rooms", rooms_path%>
-      <%=link_to "all the distros", distros_path%>
-      <%=link_to "all the console", consoles_path%>
-      <%=link_to "all the programming languages", programminglanguages_path%>
+
+
+
+
       <%=link_to "all the pair of nodes", pair_nodes_path%>
       <%=link_to "all the mac addresses", macs_path%>
       <%=link_to "all the switch tables", myswitch_tables_path%>
@@ -30,8 +31,18 @@
       <%=link_to "all the trafic infos", traffic_infos_path%>
       <%=link_to "all the ip addresses", ip_addresses_path%>
       <%=link_to "all the people", people_path%>
-      <%=link_to "all the devices", devices_path%>
+
       <%if user_signed_in?%>
+      <%if current_user.prom.try(:name) == "freshman"%>
+      <%=link_to "hacking computers", computerhackings_path%>
+      <%elsif current_user.prom.try(:name) == "sophomore"%>
+      <%=link_to "all the console", consoles_path%>
+      <%=link_to "all the devices", devices_path%>
+      <%elsif current_user.prom.try(:name) == "junior"%>
+      <%=link_to "all the programming languages", programminglanguages_path%>
+      <%elsif current_user.prom.try(:name) == "senior"%>
+      <%=link_to "all the distros", distros_path%>
+      <%end%>
         <%= button_to("Log Out", destroy_user_session_path, method: :delete) %>
       <%end%>
     </nav>
@@ -50,8 +61,8 @@
             }
         <%if user_signed_in? and current_user.company%>
       $(function(){
-              if ($("#notice").html().includes("Votre inscription est enregistrée")){
-                      document.getElementById("text").innerHTML="<p class=\"mymsg\"><%=current_user.company.description%></p><a onclick=\"off();\">X</a>";
+              if ($("#notice").html().includes("Votre inscription est enregistrée") || $("#notice").html().includes("Votre mise à jour a été prise en compte")){
+                      document.getElementById("text").innerHTML="<p class=\"mymsg\">Salut <%=current_user.firstname%> ! <%=current_user.company.description%><%=current_user.prom.description%></p><a onclick=\"off();\">X</a>";
                       on();
                     }
             });

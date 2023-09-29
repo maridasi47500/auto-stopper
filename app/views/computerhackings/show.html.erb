@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @computerhacking %>
+
+<div>
+  <%= link_to "Edit this computerhacking", edit_computerhacking_path(@computerhacking) %> |
+  <%= link_to "Back to computerhackings", computerhackings_path %>
+
+  <%= button_to "Destroy this computerhacking", @computerhacking, method: :delete %>
+</div>

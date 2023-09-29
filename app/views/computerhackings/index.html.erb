@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Computerhackings</h1>
+
+<div id="computerhackings">
+  <% @computerhackings.each do |computerhacking| %>
+    <%= render computerhacking %>
+    <p>
+      <%= link_to "Show this computerhacking", computerhacking %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New computerhacking", new_computerhacking_path %>

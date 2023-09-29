@@ -1,0 +1,2 @@
+class Computerhacking < ApplicationRecord
+end

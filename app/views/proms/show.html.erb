@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @prom %>
+
+<div>
+  <%= link_to "Edit this prom", edit_prom_path(@prom) %> |
+  <%= link_to "Back to proms", proms_path %>
+
+  <%= button_to "Destroy this prom", @prom, method: :delete %>
+</div>
