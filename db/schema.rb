@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_29_120349) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_23_194823) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -61,15 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_120349) do
     t.integer "myhack_id"
     t.integer "myscript_id"
     t.integer "myorder"
-  end
-
-  create_table "images", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.date "date"
-    t.integer "city_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "ip_addresses", force: :cascade do |t|
@@ -137,6 +128,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_120349) do
 
   create_table "people", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.integer "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

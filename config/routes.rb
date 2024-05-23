@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :places
   resources :proms
   resources :computerhackings
   resources :posts

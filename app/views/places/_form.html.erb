@@ -1,10 +1,10 @@
-<%= form_with(model: city) do |form| %>
-  <% if city.errors.any? %>
+<%= form_with(model: place) do |form| %>
+  <% if place.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(city.errors.count, "error") %> prohibited this city from being saved:</h2>
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
 
       <ul>
-        <% city.errors.each do |error| %>
+        <% place.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -15,9 +15,10 @@
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
+
   <div>
-    <%= form.label :pic, style: "display: block" %>
-    <%= form.file_field :image %>
+    <%= form.label :city_id, style: "display: block" %>
+    <%= form.number_field :city_id %>
   </div>
 
   <div>
