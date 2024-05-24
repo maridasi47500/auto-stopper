@@ -1,4 +1,19 @@
 $(function(){
+	$("#submitmessageform").submit(function(){
+		var hey=$(this)[0];
+		$.ajax({data:$(this).serialize(),url: hey.action, type:hey.method,success:function(data){
+			console.log(data);}});
+		$("[data-chat-room]").append(`
+		<article class="chat-line" id="message_${data.id}">
+		    <span class="speaker">prenom</span>
+		        <span class="body">${data.content}</span>
+			                                                                                                                                      </article>
+
+			`);
+
+		return false;
+	});
+  if ($("#btnsearchpeople").length > 0){
   $("#btnsearchpeople").click(function(ev){
 	  ev.preventDefault();
 	  ev.stopPropagation();
@@ -16,6 +31,8 @@ $(function(){
     }});
   
   });
+  }
+  if ($("#selectpeople").length > 0){
                 $("#selectpeople").change(function(e){
 	  e.preventDefault();
 	  e.stopPropagation();
@@ -24,6 +41,8 @@ $(function(){
                             $("#genstrouve").append(data);
                           }});
                 });
+  }
+  if ($("#btnsearchdevice").length > 0){
   $("#btnsearchdevice").click(function(ev){
 	  ev.preventDefault();
 	  ev.stopPropagation();
@@ -41,6 +60,8 @@ $(function(){
     }});
   
   });
+  }
+  if ($("#selectdevice").length > 0){
                 $("#selectdevice").change(function(e){
 	  e.preventDefault();
 	  e.stopPropagation();
@@ -49,4 +70,5 @@ $(function(){
                             $("#appareiltrouve").append(data);
                           }});
                 });
+  }
   });

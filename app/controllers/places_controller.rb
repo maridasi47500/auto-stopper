@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :set_place, only: %i[ show edit update destroy ]
+  before_action :set_place, only: %i[ show edit update destroy aller ]
 
   # GET /places or /places.json
   def index
@@ -65,6 +65,6 @@ class PlacesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def place_params
-      params.require(:place).permit(:name, :city_id)
+      params.require(:place).permit(:name,:image, :city_id)
     end
 end

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :places
+  resources :commandlines
+  resources :places do
+    member do
+      get "aller"
+    end
+  end
   resources :proms
   resources :computerhackings
   resources :posts

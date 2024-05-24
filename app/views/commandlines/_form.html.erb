@@ -1,0 +1,34 @@
+
+<a href="/places/<%=params[:place_id]%>">< Revenir à ce endroit</a>
+<%= form_with(model: commandline) do |form| %>
+  <% if commandline.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(commandline.errors.count, "error") %> prohibited this commandline from being saved:</h2>
+
+      <ul>
+        <% commandline.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.hidden_field :place_id,value: params[:place_id]%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+

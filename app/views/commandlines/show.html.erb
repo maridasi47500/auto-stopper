@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @commandline %>
+
+<div>
+  <%= link_to "Edit this commandline", edit_commandline_path(@commandline) %> |
+  <%= link_to "Back to commandlines", commandlines_path %>
+
+  <%= button_to "Destroy this commandline", @commandline, method: :delete %>
+</div>

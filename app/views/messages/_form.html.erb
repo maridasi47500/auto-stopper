@@ -1,4 +1,4 @@
-<%= form_with(model: message,html:{onsubmit:"$.ajax({data:$(this).serialize(),url: this.action, type:this.method,success:function(data){console.log(data);}});return false;"}) do |form| %>
+<%= form_with(model: message,html:{id:"submitmessageform"}) do |form| %>
   <% if message.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>

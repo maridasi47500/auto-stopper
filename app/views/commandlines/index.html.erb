@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Commandlines</h1>
+
+<div id="commandlines">
+  <% @commandlines.each do |commandline| %>
+    <%= render commandline %>
+    <p>
+      <%= link_to "Show this commandline", commandline %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New commandline", new_commandline_path %>
