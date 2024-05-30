@@ -25,7 +25,7 @@ class CommandlinesController < ApplicationController
 
     respond_to do |format|
       if @commandline.save
-        format.html { redirect_to commandline_url(@commandline), notice: "Commandline was successfully created." }
+        format.html { redirect_to aller_place_url(@commandline.place_id), notice: "Commandline was successfully created." }
         format.json { render :show, status: :created, location: @commandline }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class CommandlinesController < ApplicationController
   def update
     respond_to do |format|
       if @commandline.update(commandline_params)
-        format.html { redirect_to commandline_url(@commandline), notice: "Commandline was successfully updated." }
+        format.html { redirect_to aller_place_url(@commandline.place_id), notice: "Commandline was successfully updated." }
         format.json { render :show, status: :ok, location: @commandline }
       else
         format.html { render :edit, status: :unprocessable_entity }

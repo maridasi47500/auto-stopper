@@ -1,2 +1,9 @@
 <%=content_for :backgroundpic do%>background:url('/uploads/<%=@place.image%>');<%end%>
 <a href="/commandlines/new?place_id=<%=@place.id%>">ajouter les lignes de commande à executer dans cet endroit</a>
+<h1>vous êtes à <%=@place.name%>, <%=@place.city.name%></h1>
+<main>
+  <%@place.commandlines.each do |x|%>
+    <h3><%=x.title%></h3>
+    <p><%=x.content%></p>
+  <%end%>
+</main>
