@@ -36,16 +36,27 @@
 
       <%if user_signed_in?%>
       <%=link_to "toutes les villes", cities_path%>
+      <span><%=current_user.prom.try(:name)%>, ajoute des 
+      </span>
+
       <%if current_user.prom.try(:name) == "freshman"%>
       <%=link_to "hacking computers", computerhackings_path%>
       <%elsif current_user.prom.try(:name) == "sophomore"%>
       <%=link_to "all the console", consoles_path%>
+      et des 
       <%=link_to "all the devices", devices_path%>
+      , peux tu hacker?
       <%elsif current_user.prom.try(:name) == "junior"%>
       <%=link_to "all the programming languages", programminglanguages_path%>
+      , peux tu hacker?
       <%elsif current_user.prom.try(:name) == "senior"%>
       <%=link_to "all the distros", distros_path%>
+      , peux tu hacker?
+
+
       <%end%>
+      <br>
+
         <%= button_to("Log Out", destroy_user_session_path, method: :delete) %>
       <%end%>
     </nav>
