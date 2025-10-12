@@ -6,3 +6,5 @@ comment être connecté-e ? tu peux réparer le cable rj45?? c'est par ici le lo
 ```
 require "db/ville"
 ```
+![alt text](auto2.png) 
+![alt text](auto1.png) 
