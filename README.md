@@ -3,6 +3,7 @@
 - comment être connecté-e ? tu peux réparer le cable rj45?? c'est par ici le login
 - ajouter seulement des villes avant le login svp pour etre deposee "quelque part", et ajouter des scripts
   - selectionner un facon de hacker avec des mots seulement, etc et de plusieurs facons
+- comment hacker un 1 iphone, ipad, jeu video, etc.
  - my roadmap 2 become 1 hacker
 -lancer les scripts dans la console rails
 ```
